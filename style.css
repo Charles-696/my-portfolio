@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #070707;
+    color: #f5f5f5;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    h1 {
+    text-align: center;
+}
+nav {
+    background-color: #f8f9fb;
+    padding: 20px;
+    text-align: center;
+     position: sticky;
+    top: 0;
+}
+nav a {
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+nav a:hover {
+    color: #e71111;
+}
+section {
+    padding:  80px 10%;
+}
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px;
+}
+#home {
+    background-color: #0f172a;
+    color: white;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#home h1 {
+    font-size: 56px;
+    margin: 0;
+}
+#home h2 {
+    color: #38bdf8;
+    margin: 10px 0;
+}
+#home p {
+    max-width: 800px;
+    line-height: 1.8;
+}
+.btn {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 12px 24px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+}
+.btn:hover {
+    background-color: red;
+    color: #0f172a;
+}
+.title-row {
+    display: flex;
+    align-items: center;   /* vertically aligns image with the text */
+    justify-content: center; /* centers the pair; remove for left-aligned */
+    gap: 15px;             /* space between image and heading */
+}
+.corner-img {
+    position: fixed;
+    top: 20px;
+    border-radius: 50%;
+    border: 4px solid #0f172a;
+    right: 20px;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+#about {
+    background-color: #00060b;
+}
+
+#about p {
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+#about h3 {
+    color: #38bdf8;
+    margin-top: 30px;
+}
+#skills {
+    background-color: black;
+}
+#skills li {
+    background-color: #0f172a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+#projects {
+    background-color: black;
+}
+
+#projects article {
+    background-color: #0f172a;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#projects article h3 {
+    color: #38bdf8;
+    margin-top: 0;
+}
+
+#projects article p {
+    line-height: 1.7;
+}
+#projects article {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+#education {
+    background-color: black;
+}
+
+#education h3 {
+    color: #38bdf8;
+    margin-top: 30px;
+}
+
+#education p {
+    max-width: 800px;
+    line-height: 1.8;
+}
+#achievements {
+    background-color: black;
+}
+
+#achievements ul {
+    max-width: 800px;
+    padding-left: 20px;
+}
+
+#achievements li {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+#contact {
+    background-color: #0f172a;
+}
+
+#contact p {
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+#contact a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+footer {
+    background-color: #e70b0b;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    #home h1 {
+        font-size: 40px;
+    }
+
+    #home h2 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    #skills ul {
+        flex-direction: column;
+    }
+
+    #skills li {
+        text-align: center;
+    }
+}
+.corner-img {
+    width: 130px;
+    height: 130px;
+}
+#home h1,
+#home h2,
+#home p,
+#home .btn {
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+}
