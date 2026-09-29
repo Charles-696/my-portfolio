@@ -223,7 +223,10 @@ footer p {
     #home h2 {
         font-size: 24px;
     }
-
+#home img {
+    width: 130px;
+    height: 130px;
+}
     h2 {
         font-size: 28px;
     }
