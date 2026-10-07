@@ -14,14 +14,19 @@
 
     <h1>This is Charles</h1>
 
-     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#contact">Contact</a>
+    <nav>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+            ☰
+        </button>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
     <img class="corner-img" src="images/WIN_20260217_11_13_32_Pro.jpg" alt="Logo">
     <!-- rest of your content -->
@@ -186,5 +191,29 @@
     <p>&copy; 2026 Charles. All rights reserved.</p>
 
 </footer>
+<script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuButton.addEventListener("click", function () {
+        const isOpen = navLinks.style.display === "block";
+
+        navLinks.style.display = isOpen ? "none" : "block";
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Open navigation menu" : "Close navigation menu"
+        );
+        menuButton.textContent = isOpen ? "☰" : "✕";
+    });
+    navLinks.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.style.display = "none";
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation menu");
+        menuButton.textContent = "☰";
+    });
+});
+</script>
 </body>
 </html>
